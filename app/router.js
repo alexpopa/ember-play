@@ -7,6 +7,23 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('recordlabel', function() {
+      this.route('create');
+      this.route('update', { path: 'update/:recordlabel_id' });
+  });
+
+  this.route('album', function() {
+    this.route('create');
+    this.route('update', { path: 'update/:ralbum_id' });
+  });
+  this.route('song', function() {
+    this.route('create');
+    this.route('update', { path: 'update/:song_id' });
+  });
+  this.route('artist', function() {
+    this.route('create');
+    this.route('update', { path: 'update/:artist_id' });
+  });
 });
 
 export default Router;

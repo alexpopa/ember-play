@@ -1,0 +1,9 @@
+<h1>Show Record Label</h1>
+<ul>
+{{#each model as |recordlabel|}}
+  <li>
+  	{{#link-to 'recordlabel.update' recordlabel.id }}{{recordlabel.name}}{{/link-to}}
+  </li>
+{{/each}}
+</ul>
+{{outlet}}

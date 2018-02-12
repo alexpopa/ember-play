@@ -1,0 +1,7 @@
+<h1>Update Record Label</h1>
+
+<form class="" method="post" {{action "updateRecordLabel" model on="submit"}}>
+  {{input type="text" placeholder= "Update Record Label" value=model.name}}
+  {{input type="submit" value="Update"}}
+</form><button {{action 'destroyRecordLabel' model}}>X</button>
+{{outlet}}

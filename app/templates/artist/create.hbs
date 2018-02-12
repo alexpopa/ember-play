@@ -2,6 +2,11 @@
 <h1>Add Artist</h1>
 <form class="" method="post" {{action "addArtist" on="submit"}}>
   {{input type="text" value=model.name placeholder= "Insert Artist"}}
+	<select value=recordlabel class='recordlabel-dropdown'>
+    {{#each model as |recordlabel|}}
+      <option value={{recordlabel.id}} selected="selected" >{{recordlabel.name}}</option>
+    {{/each}}
+	</select>
   {{input type="submit" value="Create"}}
 </form>
 {{outlet}}

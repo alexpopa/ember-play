@@ -14,7 +14,7 @@ Router.map(function() {
 
   this.route('album', function() {
     this.route('create');
-    this.route('update', { path: 'update/:ralbum_id' });
+    this.route('update', { path: 'update/:album_id' });
   });
   this.route('song', function() {
     this.route('create');

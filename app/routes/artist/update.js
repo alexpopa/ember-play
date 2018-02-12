@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model(params) {
-		return this.store.findRecord('artist', params.album_id);
+		return this.store.findRecord('artist', params.artist_id);
 	},
 	actions: {
 	updateArtist(model) {

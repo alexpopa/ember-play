@@ -1,1 +1,7 @@
+<h1>Update Album</h1>
+
+<form class="" method="post" {{action "updateAlbum" model on="submit"}}>
+  {{input type="text" placeholder= "Update Album" value=model.name}}
+  {{input type="submit" value="Update"}}
+</form><button {{action 'destroyAlbum' model}}>X</button>
 {{outlet}}

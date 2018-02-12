@@ -1,1 +1,7 @@
+
+<h1>Add Song</h1>
+<form class="" method="post" {{action "addSong" on="submit"}}>
+  {{input type="text" value=model.name placeholder= "Insert Song"}}
+  {{input type="submit" value="Create"}}
+</form>
 {{outlet}}

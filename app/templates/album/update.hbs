@@ -1,16 +1,22 @@
 <h1>Artist name</h1> 
 
-{{#link-to 'artist.update' model.artist.id}}{{model.artist.name}}{{/link-to}}
+{{#link-to 'artist.update' model.album.artist.id}}{{model.album.artist.name}}{{/link-to}}
 
 <h1>Update Album</h1>
 
 <form class="" method="post" {{action "updateAlbum" model on="submit"}}>
-  {{input type="text" placeholder= "Update Album" value=model.name}}
+  {{input type="text" placeholder= "Update Album" value=model.album.name}}
+  <select onchange={{action "changeupdatevalue" value="target.value"}} class='artist-dropdown'>
+  <option value="">Select Artist</option>
+    {{#each model.artists as |artist|}}
+      <option value={{artist.id}}>{{artist.name}}</option>
+    {{/each}}
+	</select>
   {{input type="submit" value="Update"}}
 </form><button {{action 'destroyAlbum' model}}>X</button>
 
 <h1>Track List</h1>
-{{#each model.songs as |song|}}
+{{#each model.album.songs as |song|}}
   <li>
   	{{#link-to 'song.update' song.id}}{{song.name}}{{/link-to}}
   </li>

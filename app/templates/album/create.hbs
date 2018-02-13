@@ -3,6 +3,7 @@
 <form class="" method="post" {{action "addAlbum" on="submit"}}>
   {{input type="text" value=model.name placeholder= "Insert Album"}}
 	<select onchange={{action 'changevalue' value="target.value"}} class='album-dropdown'>
+	<option value="">Select Artist</option>
     {{#each model as |artist|}}
       <option value={{artist.id}} >{{artist.name}}</option>
     {{/each}}

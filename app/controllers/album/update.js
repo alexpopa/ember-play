@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	actions: {
-		changevalue(value) {
-			this.set('model.artist_id', value)
+		changeupdatevalue(value) {
+			this.set('model.updateartist_id', value)
 		}
 	}
 });

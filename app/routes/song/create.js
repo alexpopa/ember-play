@@ -10,11 +10,11 @@ actions: {
 				name: this.get('controller.model.name')
 			})
 			this.set('controller.model.name', '')
-			this.store.findRecord('album', this.get('controller.model.album_id')).then(function(album) {
-				newSong.save();
-				album.get('songs').pushObject(newSong);
-				album.save();
-			})
+			// this.store.findRecord('album', this.get('controller.model.album_id')).then(function(album) {
+			// 	newSong.save();
+			// 	album.get('songs').pushObject(newSong);
+			// 	album.save();
+			// })
 			this.transitionTo('album.index')
 		},
 	}

@@ -9,7 +9,7 @@
 
 {{#each model.albums as |album|}}
   <li>
-  	{{#link-to 'album.index'}}{{album.name}}{{/link-to}}
+  	{{#link-to 'album.update' album.id}}{{album.name}}{{/link-to}}
   </li>
 {{/each}}
 

@@ -1,12 +1,13 @@
 
 <h1>Add Artist</h1>
 <form class="" method="post" {{action "addArtist" on="submit"}}>
-  {{input type="text" value=model.name placeholder= "Insert Artist"}}
-	<select onchange={{action 'changevalue' value="target.value"}} class='recordlabel-dropdown'>
+  {{input type="text" value=model.name placeholder="Insert Artist"}}
+	<select onchange={{action "changevalue" value="target.value"}} class='recordlabel-dropdown'>
     {{#each model as |recordlabel|}}
-      <option value={{recordlabel.id}} >{{recordlabel.name}}</option>
+      <option value={{recordlabel.id}}>{{recordlabel.name}}</option>
     {{/each}}
 	</select>
   {{input type="submit" value="Create"}}
 </form>
 {{outlet}}
+

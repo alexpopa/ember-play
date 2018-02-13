@@ -2,6 +2,11 @@
 <h1>Add Song</h1>
 <form class="" method="post" {{action "addSong" on="submit"}}>
   {{input type="text" value=model.name placeholder= "Insert Song"}}
+  <select onchange={{action 'changevalue' value="target.value"}} class='song-dropdown'>
+    {{#each model as |album|}}
+      <option value={{album.id}} >{{album.name}}</option>
+    {{/each}}
+	</select>
   {{input type="submit" value="Create"}}
 </form>
 {{outlet}}

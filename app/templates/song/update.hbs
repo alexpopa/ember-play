@@ -1,3 +1,7 @@
+<h1>Album name</h1> 
+
+{{#link-to 'album.update' model.album.id}}{{model.album.name}}{{/link-to}}
+
 <h1>Update Song</h1>
 
 <form class="" method="post" {{action "updateSong" model on="submit"}}>

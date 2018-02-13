@@ -1,13 +1,22 @@
+<h1>Record Label</h1> 
+
+{{#link-to 'recordlabel.update' model.artist.recordlabel.id}}{{model.artist.recordlabel.name}}{{/link-to}}
+
 <h1>Update Artist </h1>
 
 <form class="" method="post" {{action "updateArtist" model on="submit"}}>
-  {{input type="text" placeholder= "Update Artist" value=model.name}}
+  {{input type="text" placeholder= "Update Artist" value=model.artist.name}}
+  <select onchange={{action "changeupdatevalue" value="target.value"}} class='recordlabel-dropdown'>
+    {{#each model.recordlabels as |recordlabel|}}
+      <option value={{recordlabel.id}}>{{recordlabel.name}}</option>
+    {{/each}}
+	</select>
   {{input type="submit" value="Update"}}
 </form><button {{action 'destroyArtist' model}}>X</button>
 
 <h1>Albums Published</h1>
 
-{{#each model.albums as |album|}}
+{{#each model.artist.albums as |album|}}
   <li>
   	{{#link-to 'album.update' album.id}}{{album.name}}{{/link-to}}
   </li>

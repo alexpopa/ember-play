@@ -4,12 +4,13 @@
   {{input type="text" placeholder= "Update Record Label" value=model.name}}
   {{input type="submit" value="Update"}}
 </form><button {{action 'destroyRecordLabel' model}}>X</button>
-{{outlet}}
 
 <h1>Record Label Artists Signed</h1>
 
 {{#each model.artists as |artist|}}
   <li>
-  	{{#link-to 'artist.index'}}{{artist.name}}{{/link-to}}
+  	{{#link-to 'artist.update' artist.id}}{{artist.name}}{{/link-to}}
   </li>
 {{/each}}
+
+{{outlet}}

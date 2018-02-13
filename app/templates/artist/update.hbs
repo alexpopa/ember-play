@@ -4,4 +4,13 @@
   {{input type="text" placeholder= "Update Artist" value=model.name}}
   {{input type="submit" value="Update"}}
 </form><button {{action 'destroyArtist' model}}>X</button>
+
+<h1>Albums Published</h1>
+
+{{#each model.albums as |album|}}
+  <li>
+  	{{#link-to 'album.index'}}{{album.name}}{{/link-to}}
+  </li>
+{{/each}}
+
 {{outlet}}

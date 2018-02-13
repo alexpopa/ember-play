@@ -9,14 +9,14 @@ export default Ember.Route.extend({
 			const newArtist = this.store.createRecord('artist', {
 				name: this.get('controller.model.name')
 			})
-			this.set('controller.model.name', '')
-			this.store.findRecord('recordlabel', this.get('controller.model.recordlabel_id')).then(function(recordlabel) {
+			this.set('controller.model.name', '');
+			this.store.findRecord('recordlabel', this.get('model.artist_id')).then(function(recordlabel) {
 				newArtist.save();
 				recordlabel.get('artists').pushObject(newArtist);
 				recordlabel.save();
-			})
-			this.transitionTo('artist.index')
-		},
+			});
+			this.transitionTo('artist.index');
+		}
 	}
 });
 

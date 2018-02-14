@@ -11,12 +11,15 @@ export default Ember.Route.extend({
 	updateAlbum(model) {
 		if(this.get('controller.model.album.name') && this.get('controller.model.album.name') != null && this.get('controller.model.updateartist_id') && this.get('controller.model.updateartist_id') != null) {
 			model.album.set('name', this.get('controller.model.album.name'));
-			model.album.save();
-			// this.set('controller.model.name', '')
-			this.store.findRecord('artist', this.get('controller.model.updateartist_id')).then(function(artist) {
-				model.album.set('artist', artist)
-				artist.save();
+			const artistnew = this.store.findRecord('artist', this.get('controller.model.updateartist_id'))
+			model.album.get('artist').then(function(artistold) {
+				artistnew.then(function(artistnew) {
+					model.album.set('artist', artistnew)
+					artistold.save();
+					artistnew.save();
+				})
 			})
+			model.album.save();
 			this.transitionTo('album.index')
 		} else {
 			alert("Please make sure you have both album name and artist selected");

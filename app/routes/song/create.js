@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 					album.get('songs').pushObject(newSong);
 					album.save();
 				})
-				this.transitionTo('album.index')
+				this.transitionTo('song.index')
 			} else {
 				alert("Please make sure you have both song name and album selected");
 			}

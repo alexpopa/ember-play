@@ -26,7 +26,7 @@ export default Ember.Route.extend({
 		}
 	},
 	destroySong(model) {
-		model.destroyRecord()
+		model.song.destroyRecord()
 		this.transitionTo('song.index')
 		}
 	}

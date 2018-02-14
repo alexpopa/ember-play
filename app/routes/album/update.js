@@ -26,7 +26,7 @@ export default Ember.Route.extend({
 		}
 	},
 	destroyAlbum(model) {
-		model.destroyRecord()
+		model.album.destroyRecord()
 		this.transitionTo('album.index')
 		}
 	}

@@ -23,9 +23,9 @@ model() {
           relationships: {
 			artist: {
 				data: [
-          			{id: 3, type: 'artist'}
-          		]
-          	}
+					{id: 3, type: 'artist'}
+				]
+			}
           }
         }, {
           id: 1,
@@ -40,14 +40,14 @@ model() {
           type: 'artist',
           attributes: { name: 'X Ambassadors', recordlabel_id: 1 },
           relationships: {
-          	recordlabels: { data: [{ id: 1, type: 'recordlabel'}] },
+			recordlabels: { data: [{ id: 1, type: 'recordlabel'}] },
           }
         }, {
           id: 3,
           type: 'artist',
           attributes: { name: 'Drake', recordlabel_id: 2 },
           relationships: {
-          	recordlabels: { data: [{ id: 2, type: 'recordlabel'}] },
+			recordlabels: { data: [{ id: 2, type: 'recordlabel'}] },
           }
         }, {
           id: 1,

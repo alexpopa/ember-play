@@ -21,15 +21,6 @@ When loading the landing page (http://localhost:4200), the database gets populat
 
 All controllers/templates/routes/tests have been generated using `ember generate` 
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Development
 
 A few brainstorming ideas about taking this application beyond original scope-

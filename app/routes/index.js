@@ -5,25 +5,25 @@ model() {
     this.store.push({
       data: [
         {
-          id: 1,
-          type: 'recordlabel',
-          attributes: { name: 'Kidinakorner' },
-          relationships: {
-            artists: {
-              data: [
-                { id: 1, type: 'artist' },
-                { id: 2, type: 'artist' }
-              ]
-            }
-          }
-        }, {
-          id: 2,
-          type: 'recordlabel',
-          attributes: { name: 'OVO Sound' },
-          relationships: {
-			artist: {
+		id: 1,
+		type: 'recordlabel',
+		attributes: { name: 'Kidinakorner' },
+		relationships: {
+			artists: {
 				data: [
-					{id: 3, type: 'artist'}
+					{ id: 1, type: 'artist' },
+					{ id: 2, type: 'artist' }
+				]
+			}
+		}
+        }, {
+		id: 2,
+		type: 'recordlabel',
+		attributes: { name: 'OVO Sound' },
+		relationships: {
+			artists: {
+				data: [
+					{ id: 3, type: 'artist' }
 				]
 			}
           }
@@ -49,6 +49,10 @@ model() {
           relationships: {
 			recordlabels: { data: [{ id: 2, type: 'recordlabel'}] },
           }
+        }, {
+          id: 4,
+          type: 'artist',
+          attributes: { name: 'Macklemore'},
         }, {
           id: 1,
           type: 'album',

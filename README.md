@@ -1,21 +1,15 @@
 # ember-code-challenge
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple Ember application which allows the user to create and modify 4 components of a database - Record Labels, Artists, Albums, and Songs.
 
-## Prerequisites
+The ralational scheme follows in that order: every song belongs to an album, every album to an artist, and every artist to a record label.
 
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+When loading the landing page (http://localhost:4200), the database gets populated with mock data found in routes/index.js
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd ember-code-challenge`
+* `cd ember-play`
 * `npm install`
 
 ## Running / Development
@@ -27,10 +21,9 @@ You will need the following things properly installed on your computer.
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+### Tests
 
-* `ember test`
-* `ember test --server`
+Tests have been generated but not populated for this assignment
 
 ### Building
 
@@ -41,10 +34,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 Specify what it takes to deploy your app.
 
-## Further Reading / Useful Links
+## Further Development
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+A few brainstorming ideas about taking this application beyond original scope-
+
+* Generating tests
+* Styling the application
+* Separate details from the update page into individual view pages for each component
+

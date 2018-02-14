@@ -15,9 +15,7 @@ export default Ember.Route.extend({
 			model.artist.get('recordlabel').then(function(recordlabelold) {
 				recordlabelnew.then(function(recordlabelnew) {
 					model.artist.set('recordlabel', recordlabelnew)
-					if (recordlabelold) {
-						recordlabelold.save();
-					}
+					recordlabelold.save();
 					recordlabelnew.save();
 				})
 			})

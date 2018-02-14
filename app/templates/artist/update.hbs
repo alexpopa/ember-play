@@ -19,7 +19,7 @@
 
 {{#each model.artist.albums as |album|}}
   <li>
-  	{{#link-to 'album.update' album.id}}{{album.name}}{{/link-to}}
+  	{{album.name}}
   </li>
 {{/each}}
 

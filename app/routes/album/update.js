@@ -15,7 +15,9 @@ export default Ember.Route.extend({
 			model.album.get('artist').then(function(artistold) {
 				artistnew.then(function(artistnew) {
 					model.album.set('artist', artistnew)
-					artistold.save();
+					if (artistold) {
+						artistold.save();
+					}
 					artistnew.save();
 				})
 			})

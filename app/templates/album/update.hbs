@@ -18,7 +18,7 @@
 <h1>Track List</h1>
 {{#each model.album.songs as |song|}}
   <li>
-  	{{#link-to 'song.update' song.id}}{{song.name}}{{/link-to}}
+  	{{song.name}}
   </li>
 {{/each}}
 {{outlet}}

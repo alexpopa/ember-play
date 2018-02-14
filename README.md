@@ -19,11 +19,7 @@ When loading the landing page (http://localhost:4200), the database gets populat
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Tests
-
-Tests have been generated but not populated for this assignment
+All controllers/templates/routes/tests have been generated using `ember generate` 
 
 ### Building
 
